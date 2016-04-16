@@ -1,0 +1,32 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <tran_id>SWZJ.HXZG.SB.SZPMSBZTSBQXXXCX</tran_id>
+    <channel_id>GDGS.NFWB.WSBST</channel_id>
+    <tran_seq>C000BNFZC25001202410092132372838</tran_seq>
+    <tran_date>20141009</tran_date>
+    <tran_time>213420337</tran_time>
+	<expand>
+		<name>identityType</name>
+		<value>3327006290056</value>
+	</expand>
+	<expand>
+		<name>sjry</name>
+		<value>14400000000</value>
+	</expand>
+	<expand>
+		<name>sjjg</name>
+		<value>14400000000</value>
+	</expand>
+  </head>
+  <body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<taxML xsi:type="HXZGSB00492Request" bbh="String" xmlbh="String" xmlmc="String" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_SB_00492_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<SBSzpmsbztsbqxQueryVO>
+		<djxh>10114401000130544922</djxh>
+		<skssqq>2014-09-01</skssqq>
+		<skssqz>2014-09-30</skssqz>
+		<zsxmDm>10101</zsxmDm>
+		<zspmDm>101016508</zspmDm>
+		<yzpzzlDm>BDA0610342</yzpzzlDm>
+	</SBSzpmsbztsbqxQueryVO>
+</taxML>]]></body>
+</service>

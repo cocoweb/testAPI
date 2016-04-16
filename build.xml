@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project AntSVN with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+	<property file="build.properties"/>
+	
+	<property name="out_path" value="${project_path}workspace/" />
+	<property name="jar.version" value="0.1" />
+	<property name="jar.name" value="${project_name}_${jar.version}.jar" />
+	
+ 	
+    <target name="create_run_jar">
+        <jar destfile="${out_path}${jar.name}">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="cn.foresee.test.hxzg.Call_EJB"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="${libs_list}"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip" />
+            <fileset dir="${project_path}bin" >
+            	<exclude name="**/*.properties"/>
+            	<exclude name="dat/"/>
+            	<exclude name="tmp/"/>
+            </fileset>
+            <!--fileset dir="${project_path}lib"/-->
+            <zipfileset dir="${project_path}lib" includes="loadtestools-1.2.jar"/>
+            <zipfileset dir="F:\OpenSource\poi-bin-3.11-20141221\poi-3.11" includes="poi-3.11-20141221.jar"/>
+            <zipfileset dir="F:\OpenSource\poi-bin-3.11-20141221\poi-3.11" includes="poi-ooxml-3.11-20141221.jar"/>
+            <zipfileset dir="F:/OpenSource/libs" includes="args4j-2.32.jar"/>
+            <zipfileset dir="F:/OpenSource/zip4j_1.3.1" includes="zip4j_1.3.2.jar"/>
+            <zipfileset dir="${project_path}lib" includes="commons-lang-2.3.jar"/>
+            <zipfileset dir="${project_path}lib" includes="bsh-1.3.0.jar"/>
+            <zipfileset dir="${project_path}lib" includes="commons-codec-1.6.jar"/>
+            <zipfileset dir="${project_path}lib" includes="commons-logging-1.1.1.jar"/>
+            <zipfileset dir="${project_path}lib" includes="log4j-1.2.15.jar"/>
+            <!--zipfileset dir="${project_path}lib" includes="antlr-runtime-3.4.jar"/>
+            <zipfileset dir="${project_path}lib" includes="jna-3.5.2.jar"/>
+            <zipfileset dir="${project_path}lib" includes="jsch.agentproxy.connector-factory-0.0.7.jar"/>
+            <zipfileset dir="${project_path}lib" includes="jsch.agentproxy.core-0.0.7.jar"/>
+            <zipfileset dir="${project_path}lib" includes="jsch.agentproxy.pageant-0.0.7.jar"/>
+            <zipfileset dir="${project_path}lib" includes="jsch.agentproxy.sshagent-0.0.7.jar"/>
+            <zipfileset dir="${project_path}lib" includes="jsch.agentproxy.svnkit-trilead-ssh2-0.0.7.jar"/>
+            <zipfileset dir="${project_path}lib" includes="jsch.agentproxy.usocket-jna-0.0.7.jar"/>
+            <zipfileset dir="${project_path}lib" includes="jsch.agentproxy.usocket-nc-0.0.7.jar"/>
+            <zipfileset dir="${project_path}lib" includes="platform-3.5.2.jar"/>
+            <zipfileset dir="${project_path}lib" includes="sequence-library-1.0.2.jar"/>
+            <zipfileset dir="${project_path}lib" includes="sqljet-1.1.10.jar"/>
+            <zipfileset dir="${project_path}lib" includes="svnkit-1.8.3.jar"/>
+            <zipfileset dir="${project_path}lib" includes="svnkit-cli-1.8.3.jar"/>
+            <zipfileset dir="${project_path}lib" includes="svnkit-javahl16-1.8.3.jar"/>
+            <zipfileset dir="${project_path}lib" includes="trilead-ssh2-1.0.0-build217.jar"/-->
+        	<zipfileset dir="${project_path}lib" includes="commons-cli-1.3.1.jar"/>
+        	<zipfileset dir="${project_path}lib" includes="weblogic-t3client-10.3.3.0.jar"/>
+        	<zipfileset dir="${project_path}lib" includes="com.foresee.etax.ejbclient.jar"/>
+        	<zipfileset dir="${project_path}lib" includes="slf4j.jcl-1.5.6.jar"/>
+        	<zipfileset dir="${project_path}lib" includes="slf4j.api-1.5.6.jar"/>
+
+        </jar>
+		<!--copy todir="p:/workspace">
+			<fileset dir="${project_path}/bin" includes="**/svntools.properties" />
+			<fileset dir="${project_path}/bin" includes="**/log4j.properties" />
+			<fileset dir="${out_path}" includes="*.bat" />
+			<fileset dir="${out_path}" includes="*.sh" />
+			<fileset dir="${out_path}" includes="${jar.name}" />
+			<fileset dir="${out_path}" includes="listcopy_src.zip" />
+		</copy>
+		<zip destfile="${out_path}workspace${jar.version}.zip">
+			<fileset dir="${out_path}" >
+				<include name="${jar.name}"/>
+				<include name="listcopy_src.zip"/>
+				<include name="ReleaseNote.md"/>
+				<include name="readme.png"/>
+				<include name="svntools.properties"/>
+				<include name="*.bat"/>
+				<include name="*.sh"/>
+				<include name="*.log"/>
+				<include name="*.xls"/>
+				<include name="xls/*"/>
+				<include name="tmp/"/>
+				
+			</fileset>	
+		</zip-->
+
+    </target>
+	
+	<!-- ================================= 
+          target: name              
+         ================================= -->
+    <target name="createWorkspace" depends="create_run_jar" description="description">
+    	
+		<copy todir="${out_path}">
+			<fileset dir="${project_path}/bin" includes="**/file.properties" />
+			<fileset dir="${project_path}/bin" includes="**/ejbclient.properties" />
+			<fileset dir="${project_path}/bin" includes="**/log4j.properties" />
+			<fileset dir="${project_path}/bin" includes="**/para.properties" />
+			<fileset dir="${project_path}" includes="**/README.md" />
+			
+		</copy>
+    	<copy todir="${out_path}/dat">
+    		<fileset dir="${project_path}/bin/dat" includes="**/*" />
+    	</copy>
+    	
+		<zip destfile="${out_path}${project_name}_src.zip">
+			<fileset dir="${project_path}/src" >
+				<include name="**/*.java"/>
+				<exclude name="tmp/" />
+			</fileset>	
+		</zip>
+
+        
+    </target>
+
+</project>

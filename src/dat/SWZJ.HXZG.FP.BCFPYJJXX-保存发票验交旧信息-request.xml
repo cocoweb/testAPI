@@ -1,0 +1,60 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.FP.BCFPYJJXX</tran_id>
+		<channel_id>GDGS.NFWB.WSBST</channel_id>
+		<tran_seq>C000BNFZC15001201410141922067550</tran_seq>
+		<tran_date>20141014</tran_date>
+		<tran_time>192216003</tran_time>
+		<expand>
+			<name>identityType</name>
+			<value>3327006290056</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>14406821052</value>
+		</expand>
+		<expand>
+			<name>sjjg</name>
+			<value>14400000000</value>
+		</expand>
+	</head>
+	<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<taxML xsi:type="HXZGFP00057Request" bbh="" xmlbh="" xmlmc="" xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/ TaxMLBw_HXZG_FP_00057_Request_V1.0.xsd" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fpYjjcyqkVO>
+		<sjgsdq>14406823600</sjgsdq>
+		<djxh>11440600000000000146</djxh>
+		<cyrDm>14406820320</cyrDm>
+		<yjjsjlyDm>01</yjjsjlyDm>
+		<cyswjgDm>14406823600</cyswjgDm>
+		<cyrq>2014/10/22</cyrq>
+		<fpwzjl/>
+		<lrrDm>14406820320</lrrDm>
+		<fpcyuuid/>
+		<xgrDm/>
+	</fpYjjcyqkVO>
+	<fpyjjcyqkMxVOList>
+		<fpyjjcyqkMxVOListlb>
+			<fpkjqkDm>10</fpkjqkDm>
+			<sjgsdq>14406823600</sjgsdq>
+			<fpzlDm>000002100300</fpzlDm>
+			<kpje>11</kpje>
+			<se>0</se>
+			<fpzzhm>10000087</fpzzhm>
+			<fpyjjgDm>1</fpyjjgDm>
+			<ywuuid/>
+			<fpqshm>10000085</fpqshm>
+			<fs>3</fs>
+			<fpDm>144001500001</fpDm>
+			<fpcyuuid/>
+			<lrrDm>14406820320</lrrDm>
+			<kpqsrq>2014/10/22</kpqsrq>
+			<cyfpmxuuid/>
+			<xgrDm/>
+			<zfbz1>N</zfbz1>
+			<kpjzrq>2014/10/22</kpjzrq>
+		</fpyjjcyqkMxVOListlb>
+	</fpyjjcyqkMxVOList>
+	<saveType>01</saveType>
+	<wfwzdj>false</wfwzdj>
+</taxML>]]></body>
+</service>
