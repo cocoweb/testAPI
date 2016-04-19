@@ -6,10 +6,8 @@ import java.util.Map.Entry;
 import java.util.Properties;
 
 import com.foresee.etax.ejbclient.EjbClient;
-import com.foresee.test.fileprops.FileDefinition;
 import com.foresee.test.loadrunner.lrTools;
 import com.foresee.test.loadrunner.lrapi4j.lr;
-import com.foresee.test.util.lang.StrUtils;
 import com.foresee.test.util.lang.StringUtil;
 
 import cn.foresee.test.hxzg.file.ParaProperties;
@@ -29,6 +27,7 @@ public class CallEJBHelper {
         lr.start_transaction("连接EJB...");
         esbClient = new EjbClient().getCurrentEsb();
         lr.end_transaction("连接EJB...",lr.AUTO);
+        
 
     }
     
