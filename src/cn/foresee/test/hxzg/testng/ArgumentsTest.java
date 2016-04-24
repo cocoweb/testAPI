@@ -21,12 +21,17 @@ public class ArgumentsTest {
     @BeforeTest
     public void beforeTest() {
         xargs=Arguments.getInstance();
-        xargs.load(key);
-        xargs.load(key1);
-        xargs.load(key2);
-        xargs.load(key0);
-        xargs.load(keyxml);
-        
+        try {
+            xargs.load(key);
+           xargs.load(key1);
+            xargs.load(key2);
+            xargs.load(key0);
+            xargs.load(keyxml);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+         
      }
     @DataProvider(name = "iterator")
     public Iterator<Object[]> getData() {

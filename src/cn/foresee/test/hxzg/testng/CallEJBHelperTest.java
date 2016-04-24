@@ -20,10 +20,6 @@ public class CallEJBHelperTest {
     throw new RuntimeException("Test not implemented");
   }
 
-  @Test
-  public void createConn() {
-    callejb.createConn();
-  }
   
   @Test
   public void getDefaultKey(){

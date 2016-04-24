@@ -34,6 +34,8 @@ public class Call_EJB {
         og1.addOption(Option.builder("h").longOpt("help").desc("显示这里的参数信息").hasArg(false).required(false).build());
         og1.addOption(Option.builder("d").longOpt("display").desc("显示输出参数化报文").hasArg(false).required(false).build());
         og1.addOption(Option.builder("c").longOpt("call").desc("调用EJB接口\n").hasArg(false).required(false).build());
+        og1.addOption(Option.builder("e").longOpt("excel").desc("按照excel定义进行调用\n").hasArg(false).required(false).build());
+
         //og1.addOption(Option.builder("b").longOpt("batchcall").desc("批量调用EJB接口，配置中所有接口").hasArg(false).required(false).build());
         
 //        og1.addOption(Option.builder("l").longOpt("list").desc("for list; 显示待处理文件清单和版本").hasArg(false).required(false).build());
@@ -148,7 +150,9 @@ public class Call_EJB {
                 callEjbHelper.displayMess(trankey);
             } else if (cmds.hasOption('c')) {
                 callEjbHelper.callEJB(trankey);
-            } 
+            } else if(cmds.hasOption('e')) {
+                callEjbHelper.callExcel(trankey);;
+            }
 //            else if (cmds.hasOption('s')) {
 //                callEjbHelper.scanSvnToPath();
 //            } else if (cmds.hasOption('z')) {
